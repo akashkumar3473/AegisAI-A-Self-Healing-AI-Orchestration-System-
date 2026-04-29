@@ -1,0 +1,37 @@
+# AegisAI Architecture
+
+This document outlines the high-level architecture of AegisAI, a self-healing AI orchestration system designed to enforce deterministic validation and security over LLM pipelines.
+
+## Architecture Diagram
+
+![AegisAI Architecture](assets/architecture_diagram_aegisAI.png)
+
+## Flow Overview
+
+1. **User Input**
+   - Incoming query enters the system
+
+2. **Security Layer**
+   - Detects prompt injection and unsafe patterns
+
+3. **RAG Layer**
+   - Retrieves relevant context
+   - Applies query rewriting if needed
+
+4. **Evaluation Layer**
+   - Applies deterministic Jaccard scoring
+   - Flags hallucinations
+
+5. **Multi-Agent Reasoning**
+   - Prosecutor, Defender, Judge evaluate response
+
+6. **Orchestration & Recovery**
+   - Retry, rewrite, or abort based on evaluation
+
+7. **Final Output**
+   - Safe, validated response returned to user
+
+## Key Property
+
+The system enforces a hard constraint:
+- If lexical overlap < 20% → response is rejected or corrected
