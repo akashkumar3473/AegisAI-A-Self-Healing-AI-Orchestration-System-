@@ -10,6 +10,9 @@ In brief, AegisAI is **a control layer for LLM systems that detects, validates, 
 - Achieved **100% Security Block Rate (SBR)** via combined heuristic + LLM-based detection layers.
 - Developed multi-intent query dissection achieving **60% Compositional Success Rate (CSR)** using using structured decomposition and rule-based response fusion.
 
+## WorkFlow
+<img width="1402" height="1121" alt="architecture_diagram_aegisAI" src="https://github.com/user-attachments/assets/909b75c0-e6bc-4543-b7e8-f9188982b361" />
+
 
 ## Research Alignment & Methodology
 
